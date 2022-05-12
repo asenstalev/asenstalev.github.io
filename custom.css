@@ -28,7 +28,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url('WL.jpg');
+    background-image: rgba(0, 0, 0, 0.7) url('WL.jpg');
     background-blend-mode: darken;
     background-position: center;
     -webkit-background-size: cover;
