@@ -21,6 +21,10 @@
 					console.error('Error loading Embedded Messaging: ', err);
 				}
 			};
+			
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+				embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"CB_Country_Code" : "DE", "CB_Tenant" : "mA"});
+			});
 		</script>
 		<script type='text/javascript' src='https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 	</body>
