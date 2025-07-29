@@ -33,6 +33,10 @@
 			window.addEventListener("onEmbeddedMessagingWindowMinimized", () => {
 				console.log('MIN');
 			});
+
+			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {
+				console.log('CLOSE');
+			});
 		</script>
 		<script type='text/javascript' src='https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 	</body>
