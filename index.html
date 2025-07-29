@@ -8,15 +8,15 @@
 			function initEmbeddedMessaging() {
 				try {
 					window.parent.window.isLiveChatOpened = false;
-					
+
 					embeddedservice_bootstrap.settings.language = 'de';
 
 					embeddedservice_bootstrap.init(
 						'00D3N000000HSap',
 						'CB_mA_Messaging_Deployment',
-						'https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619', // VARIABLE
+						'https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619',
 						{
-							scrt2URL: 'https://de-crm--testde.sandbox.my.salesforce-scrt.com' // VARIABLE
+							scrt2URL: 'https://de-crm--testde.sandbox.my.salesforce-scrt.com'
 						}
 					);
 				} catch (err) {
