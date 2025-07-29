@@ -29,17 +29,14 @@
 			});
 
 			window.addEventListener("onEmbeddedMessagingWindowMaximized", () => {
-				console.log('MAX');
 				window.parent.window.isLiveChatOpened = true;
 			});
 
 			window.addEventListener("onEmbeddedMessagingWindowMinimized", () => {
-				console.log('MIN');
 				window.parent.window.isLiveChatOpened = false;
 			});
 
 			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {
-				console.log('CLOSE');
 				window.parent.window.isLiveChatOpened = false;
 			});
 		</script>
