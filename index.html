@@ -22,20 +22,25 @@
 				}
 			};
 
+			window.parent.window.isLiveChatOpened = false;
+
 			window.addEventListener("onEmbeddedMessagingReady", () => {
 				embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"CB_Country_Code" : "DE", "CB_Tenant" : "mA"});
 			});
 
 			window.addEventListener("onEmbeddedMessagingWindowMaximized", () => {
 				console.log('MAX');
+				window.parent.window.isLiveChatOpened = true;
 			});
 
 			window.addEventListener("onEmbeddedMessagingWindowMinimized", () => {
 				console.log('MIN');
+				window.parent.window.isLiveChatOpened = false;
 			});
 
 			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {
 				console.log('CLOSE');
+				window.parent.window.isLiveChatOpened = false;
 			});
 		</script>
 		<script type='text/javascript' src='https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
