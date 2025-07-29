@@ -12,9 +12,9 @@
 					embeddedservice_bootstrap.init(
 						'00D3N000000HSap',
 						'CB_mA_Messaging_Deployment',
-						'https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619',
+						'https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619', // VARIABLE
 						{
-							scrt2URL: 'https://de-crm--testde.sandbox.my.salesforce-scrt.com'
+							scrt2URL: 'https://de-crm--testde.sandbox.my.salesforce-scrt.com' // VARIABLE
 						}
 					);
 				} catch (err) {
@@ -24,6 +24,9 @@
 
 			window.addEventListener("onEmbeddedMessagingReady", () => {
 				embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"CB_Country_Code" : "DE", "CB_Tenant" : "mA"});
+			});
+			window.addEventListener("onEmbeddedMessagingWindowMaximized", () => {
+				console.log('onEmbeddedMessagingWindowMaximized!');
 			});
 		</script>
 		<script type='text/javascript' src='https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
