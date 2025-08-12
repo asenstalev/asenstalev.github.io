@@ -41,5 +41,28 @@
 			});
 		</script>
 		<!--script type='text/javascript' src='https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script-->
+		<script type='text/javascript'>
+			// Function to load the bootstrap script dynamically
+			function loadBootstrapScript() {
+				var config = window.chatConfig || {};
+				var bootstrapScriptSrc = 'https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619/assets/js/bootstrap.min.js';
+
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = bootstrapScriptSrc;
+				script.onload = initEmbeddedMessaging;
+				document.body.appendChild(script);
+			}
+
+			// Check if chatConfig is already available
+			if (window.chatConfig) {
+				loadBootstrapScript();
+			} else {
+				// Wait a short time for chatConfig to be set by parent window
+				setTimeout(function() {
+					loadBootstrapScript();
+				}, 500);
+			}
+		</script>
 	</body>
 </html>
