@@ -168,7 +168,7 @@
 			// Function to load the bootstrap script dynamically
 			function loadBootstrapScript() {
 				var config = window.chatConfig || {};
-				var bootstrapScriptSrc = window.bootstrapMinJsURL;
+				var bootstrapScriptSrc = config.bootstrapMinJsURL;
 
 				var script = document.createElement('script');
 				script.type = 'text/javascript';
