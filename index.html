@@ -155,10 +155,20 @@
 			};
 		</script>
 		<script type='text/javascript'>
+
+			// faked chatConfig
+			window.chatConfig = {
+				orgId: '00D3N000000HSap', 
+				eswConfigDevName: 'CB_mA_Messaging_Deployment', 
+				baseURL: 'https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619', 
+				scrt2URL: 'https://de-crm--testde.sandbox.my.salesforce-scrt.com', 
+				bootstrapMinJsURL: 'https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619/assets/js/bootstrap.min.js'
+			};
+			
 			// Function to load the bootstrap script dynamically
 			function loadBootstrapScript() {
 				var config = window.chatConfig || {};
-				var bootstrapScriptSrc = 'https://de-crm--testde.sandbox.my.site.com/ESWCBMessagingChannel1752764676619/assets/js/bootstrap.min.js';
+				var bootstrapScriptSrc = window.bootstrapMinJsURL;
 
 				var script = document.createElement('script');
 				script.type = 'text/javascript';
